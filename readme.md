@@ -14,7 +14,7 @@ This is my configuration for the build mentioned which contains the following:
 
 ### Required Files
 **ACPI**  
-SSDT-EC-USBX-DESKTOP.aml  
+[SSDT-EC-USBX-DESKTOP.aml](https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html)  
 SSDT-PLUG-DRTNIA.aml  
 
 **Drivers**  
