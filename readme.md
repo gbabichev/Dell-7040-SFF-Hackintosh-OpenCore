@@ -58,10 +58,48 @@ Add -> PciRoot(0x0)/Pci(0x2,0x0)  (dict)
 Add -> PciRoot(0x0)/Pci(0x1F,0x3) (dict)  
 -layout-id:number: 18 #This enables the built-in speaker inside the PC. Will be used for Audio, and boot-chime   
 
-**Kernel**  
-[Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#kernel)  
--AppleXcpmCfgLock:bool: True #Not needed if CFG-Lock is disabled in the BIOS. This wasn't an option on my BIOS version. 
--DisableIoMapper:bool: True #Not needed if VT-D is disabled in the BIOS. This wasn't an option on my BIOS version. 
--PanicNoKextDump:bool: True
--PowerTimeoutKernelPanic:bool: True
--XhciPortLimit:bool: False
+[**Kernel**](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#kernel)   
+Quirks  
+-AppleXcpmCfgLock:bool: True #Not needed if CFG-Lock is disabled in the BIOS. This wasn't an option on my BIOS version.   
+-DisableIoMapper:bool: True #Not needed if VT-D is disabled in the BIOS. This wasn't an option on my BIOS version.   
+-PanicNoKextDump:bool: True  
+-PowerTimeoutKernelPanic:bool: True  
+-XhciPortLimit:bool: False  
+
+[**Misc**](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#misc)  
+Security  
+-AllowNvramReset: True  
+-AllowSetDefault: True  
+-BlacklistAppleUpdates: True  
+-SecureBootModel: Default  
+-Vault: Optional  
+
+**NVRAM**  
+Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82  
+-SystemAudioVolume:data: 46  
+-boot-args:string: igfxonln=1  #Enables the use of both HDMI & DisplayPort ports at the same time. 
+-prev-lang:kbd, String: en-US:0   
+
+[**PlatformInfo**](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#platforminfo)  
+Read the guide linked above, and use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate these values below. We're using iMac17,1 for our build. 
+Generic  
+-MLB: **   
+-SystemProductName: iMac17,1  
+-SystemSerialNumber: **  
+-SystemUUID: **  
+
+If you want to enable the classic Mac boot chime, and get a pretty Bootloader, [read this first](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html). 
+Both of these items will require the latest copy of the [Resources folder](https://github.com/acidanthera/OcBinaryData), and OpenCanopy (OpenCanopy is included with the OpenCore release). 
+
+**UEFI**
+Audio
+-AudioCodec:Number: 0
+-AudioDevice:string: PciRoot(0x0)/Pci(0x1F,0x3)
+-AudioOut:number: 0
+-AudioSupport:bool: True
+-Minimum Volume:number: 70
+-Play Chime:string: Enabled
+-ResetTrafficClass:bool: False
+-SetupDelay:number: 0
+-VolumeAmplifier:number: 143
+
