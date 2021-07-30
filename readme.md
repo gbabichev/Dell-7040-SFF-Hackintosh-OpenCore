@@ -38,4 +38,6 @@ OpenRuntime.efi (Included with OpenCore)
 USBMap (included in this repo)     
 [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases)  
 
+### How to Build config.plist  
 
+1. Add 
