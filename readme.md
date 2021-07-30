@@ -20,3 +20,20 @@ AudioDxe.efi
 HfsPlus.efi  
 OpenCanopy.efi  
 OpenRuntime.efi
+
+**Kexts**  
+AirportItlwm  
+AppleALC  
+IntelBluetoothFirmware  
+IntelBluetoothInjector  
+IntelMausi  
+Lilu  
+NVMeFix  
+SMCDellSensors  
+SMCProcessor  
+SMCSuperIO  
+USBMap (included in this repo)  
+VirtualSMC   
+WhateverGreen  
+
+
