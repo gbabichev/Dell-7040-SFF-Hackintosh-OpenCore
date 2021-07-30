@@ -40,4 +40,17 @@ USBMap (included in this repo)
 
 ### How to Build config.plist  
 
-1. Add 
+1. Read through the entire [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)  
+2. Add the ACPI files, Drivers, and Kexts.  
+3. Using the latest 'sample.plist' file from Open Core, do a Clean Snapshot using [ProperTree](https://github.com/corpnewt/ProperTree)  
+4. Apply my changes:  
+
+**DeviceProperties**  
+Enables the iGPU and sets the appropriate HDMI/DVI Ports  
+PciRoot(0x0)/Pci(0x2,0x0)  
+-AAPL,ig-platform-id:00001219  #Sets the iGPU to Intel HD 530, per the [WhateverGreen Patching FAQ](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md)  
+-framebuffer-patch-enable:data:01000000  
+-framebuffer-stolenmem:data:00003001  
+-framebuffer-fbmem:data:00009000  
+-framebuffer-con1-enable:data:01000000  
+-framebuffer-con1-type:data:00080000  
