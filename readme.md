@@ -1,6 +1,6 @@
 # Dell Optiplex 7040 SFF OpenCore Setup
 ### Hardware:
-Dell Optiplex 7040 SFF
+Dell Optiplex 7040 SFF  
 CPU: Intel Core i5-6500T
 
 iGPU: Intel HD Graphics 530  
