@@ -88,7 +88,7 @@ Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82
 -prev-lang:kbd, String: en-US:0   
 
 [**PlatformInfo**](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#platforminfo)  
-Read the guide linked above, and use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate these values below. We're using iMac17,1 for our build. 
+Read the guide linked above, and use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate these values below. We're using iMac17,1 for our build.  
 Generic  
 -MLB: **   
 -SystemProductName: iMac17,1  
