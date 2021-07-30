@@ -24,19 +24,19 @@ OpenCanopy.efi (Included with OpenCore)
 OpenRuntime.efi (Included with OpenCore)  
 
 **Kexts**  
-[AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases)  
-[AppleALC](https://github.com/acidanthera/AppleALC/releases)  
-[IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases)  
-[IntelBluetoothInjector](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases)  
-[IntelMausi](https://github.com/acidanthera/IntelMausi/releases)  
+[AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases) #Enables Intel WiFi  
+[AppleALC](https://github.com/acidanthera/AppleALC/releases) #Enables Audio  
+[IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) #Enables Intel Bluetooth  
+[IntelBluetoothInjector](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) #Enables Intel Bluetooth  
+[IntelMausi](https://github.com/acidanthera/IntelMausi/releases) #Enables Intel Ethernet  
 [Lilu](https://github.com/acidanthera/Lilu/releases)  
-[NVMeFix](https://github.com/acidanthera/NVMeFix/releases/)  
+[NVMeFix](https://github.com/acidanthera/NVMeFix/releases/) #Enables unsupported NVMe SSD's  
 [SMCDellSensors](https://github.com/acidanthera/VirtualSMC/releases)  
 [SMCProcessor](https://github.com/acidanthera/VirtualSMC/releases)  
 [SMCSuperIO](https://github.com/acidanthera/VirtualSMC/releases)    
 [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases)  
 USBMap (included in this repo)     
-[WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases)  
+[WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases) #Enables iGPU
 
 ### How to Build config.plist  
 
