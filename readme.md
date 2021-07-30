@@ -7,7 +7,7 @@ This is my configuration for the build mentioned which contains the following:
 ### Known Issues  
 If you put the machine to sleep, when it wakes monitors will not wake. This is a known issue, with no fix.  
 I have gotten around this by disabling sleep inside macOS. Credit to [pwnsdx](https://gist.github.com/pwnsdx/2ae98341e7e5e64d32b734b871614915) 
-# To disable sleep
+#To disable sleep
 sudo pmset -a sleep 0; sudo pmset -a hibernatemode 0; sudo pmset -a disablesleep 1;  
 
 
