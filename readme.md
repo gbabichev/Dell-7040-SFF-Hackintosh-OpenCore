@@ -11,10 +11,10 @@ This is a sample configuration that contains the following:
 - USB Map file, to ensure all USB ports work in USB3.0 & USB 2.0 Mode
 
 ### Required Files
-**ACPI**
+**ACPI**. 
 SSDT-EC-USBX-DESKTOP.aml  
 SSDT-PLUG-DRTNIA.aml  
-**Drivers**. 
+**Drivers**  
 AudioDxe.efi  
 HfsPlus.efi  
 OpenCanopy.efi  
