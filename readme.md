@@ -45,12 +45,23 @@ USBMap (included in this repo)
 3. Using the latest 'sample.plist' file from Open Core, do a Clean Snapshot using [ProperTree](https://github.com/corpnewt/ProperTree)  
 4. Apply my changes:  
 
-**DeviceProperties**  
+[**DeviceProperties**](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#deviceproperties)    
 Enables the iGPU and sets the appropriate HDMI/DVI Ports  
-PciRoot(0x0)/Pci(0x2,0x0)  
--AAPL,ig-platform-id:00001219  #Sets the iGPU to Intel HD 530, per the [WhateverGreen Patching FAQ](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md)  
+Add -> PciRoot(0x0)/Pci(0x2,0x0)  (dict)
+-AAPL,ig-platform-id:data:00001219  #Sets the iGPU to Intel HD 530, per the [WhateverGreen Patching FAQ](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md)  
 -framebuffer-patch-enable:data:01000000  
 -framebuffer-stolenmem:data:00003001  
 -framebuffer-fbmem:data:00009000  
 -framebuffer-con1-enable:data:01000000  
 -framebuffer-con1-type:data:00080000  
+
+Add -> PciRoot(0x0)/Pci(0x1F,0x3) (dict)  
+-layout-id:number: 18 #This enables the built-in speaker inside the PC. Will be used for Audio, and boot-chime   
+
+**Kernel**  
+[Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#kernel)  
+-AppleXcpmCfgLock:bool: True #Not needed if CFG-Lock is disabled in the BIOS. This wasn't an option on my BIOS version. 
+-DisableIoMapper:bool: True #Not needed if VT-D is disabled in the BIOS. This wasn't an option on my BIOS version. 
+-PanicNoKextDump:bool: True
+-PowerTimeoutKernelPanic:bool: True
+-XhciPortLimit:bool: False
