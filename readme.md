@@ -13,8 +13,8 @@ This is a sample configuration that contains the following:
 ### Required Files
 **ACPI**
 SSDT-EC-USBX-DESKTOP.aml  
-SSDT-PLUG-DRTNIA.aml
-**Drivers**
+SSDT-PLUG-DRTNIA.aml  
+**Drivers**. 
 AudioDxe.efi  
 HfsPlus.efi  
 OpenCanopy.efi  
