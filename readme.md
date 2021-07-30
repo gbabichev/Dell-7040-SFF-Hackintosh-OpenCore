@@ -53,7 +53,7 @@ USBMap (included in this repo)
 4. Apply my changes:  
 
 [**DeviceProperties**](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#deviceproperties)    
-Enables the iGPU and sets the appropriate HDMI/DVI Ports  
+#Enables the iGPU and sets the appropriate HDMI/DVI Ports  
 Add -> PciRoot(0x0)/Pci(0x2,0x0)  (dict)  
 -AAPL,ig-platform-id:data:00001219  #Sets the iGPU to Intel HD 530, per the [WhateverGreen Patching FAQ](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md)  
 -framebuffer-patch-enable:data:01000000  
@@ -88,7 +88,7 @@ Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82
 -prev-lang:kbd, String: en-US:0   
 
 [**PlatformInfo**](https://dortania.github.io/OpenCore-Install-Guide/config.plist/skylake.html#platforminfo)  
-Read the guide linked above, and use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate these values below. We're using iMac17,1 for our build.  
+#Read the guide linked above, and use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate these values below. We're using iMac17,1 for our build.  
 Generic  
 -MLB: **   
 -SystemProductName: iMac17,1  
