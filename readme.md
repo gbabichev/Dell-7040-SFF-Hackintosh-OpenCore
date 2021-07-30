@@ -91,15 +91,22 @@ Generic
 If you want to enable the classic Mac boot chime, and get a pretty Bootloader, [read this first](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html). 
 Both of these items will require the latest copy of the [Resources folder](https://github.com/acidanthera/OcBinaryData), and OpenCanopy (OpenCanopy is included with the OpenCore release). 
 
-**UEFI**
-Audio
--AudioCodec:Number: 0
--AudioDevice:string: PciRoot(0x0)/Pci(0x1F,0x3)
--AudioOut:number: 0
--AudioSupport:bool: True
--Minimum Volume:number: 70
--Play Chime:string: Enabled
--ResetTrafficClass:bool: False
--SetupDelay:number: 0
--VolumeAmplifier:number: 143
+**UEFI**  
+Audio  
+-AudioCodec:Number: 0  
+-AudioDevice:string: PciRoot(0x0)/Pci(0x1F,0x3)  
+-AudioOut:number: 0  
+-AudioSupport:bool: True  
+-Minimum Volume:number: 70  
+-Play Chime:string: Enabled  
+-ResetTrafficClass:bool: False  
+-SetupDelay:number: 0  
+-VolumeAmplifier:number: 143  
+
+**Misc**  
+Boot  
+-PickerAttributes:Number:144  
+-PickerMode:String:External  
+-PickerVariant:String:Default  
+-ShowPicker:True/False #Up to you, if False, PC will boot straight into MacOS, otherwise you'll see the boot menu. 
 
